@@ -1,0 +1,94 @@
+#homePage{
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+   background-color: transparent;
+   padding-right: 100px;
+   position: relative;
+   max-height: 100vh !important ;
+   overflow: hidden !important;
+   .title{
+       margin-top: 63vh;
+       flex-direction: column;
+       justify-content: flex-start;
+       z-index: 1;
+       width: auto;
+   
+       .name{
+           font-family: 'dima';
+           font-size: 60px;
+           color: #fff;
+           font-weight: bold;
+           display: block;
+           margin-bottom:10px;
+           span{
+               color: #0055E1;
+           }
+       }
+       .job{
+           padding: 5px 10px;
+           background-color: rgba(0,0,0,.4);
+           width: auto;
+           font-size: 30px;
+           color: #fff;
+           font-family: 'Orbitron';
+
+           span{
+            color:#0055E1;
+            font-weight: bold;
+
+        }
+       }
+   }
+   .social-icons{
+       position: absolute;
+       bottom: 0;
+       right: 0;
+       margin-right: 100px;
+       height:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       a{
+           color: #fff;
+           font-size: 30px;
+           margin-left: 20px;
+           transition: all ease .4s;
+           &:hover{
+             color: #0055E1;
+           }
+       }
+   }
+}
+@media screen and (max-width : 750px){
+    #homePage{
+        padding-right: 0 !important;
+        justify-content: center;
+        align-items: center !important;
+        display: flex;
+        .title{
+            display: flex;
+            justify-content: center !important;
+            align-items: center;
+            margin: 0 !important;
+            .name{
+                font-size: 50px !important;
+                
+            }
+            .job{
+                font-size: 25px !important;
+            }
+        }
+        .social-icons{
+            justify-content: space-around !important;
+            align-items: center;
+            display: flex;
+            width: 80%;
+            right: 10%;
+            margin-right: 0;
+            a{
+                margin: 0;
+            }
+        }
+    }
+}

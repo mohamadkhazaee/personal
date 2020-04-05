@@ -1,0 +1,72 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.9);
+    z-index: -10;
+    video{
+        height: 125vh;
+    }
+}
+.inner-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.2);
+    z-index: 0;
+}
+.Particles{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    canvas{
+        position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+}
+.menu-btn{
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 5;
+    cursor: pointer;
+    z-index: 1000000;
+    .menu-btn-line{
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        margin-bottom: 3px;
+        transform: rotate(0) translate(0);
+        transition: transform .5s;
+        &:nth-child(2){
+         background: #fff;
+        transition: background .5s ease-in;
+        }
+    }
+    &.close{
+        .menu-btn-line{
+            &:nth-child(1){
+                transform: rotate(45deg) translate(5px,5px);
+                transition: transform .5s ease-in;
+            }
+            &:nth-child(2){
+                
+                background: transparent;
+                
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(4px,-5px);
+                transition: transform .5s ease-in;
+            }
+        }
+    }
+}
